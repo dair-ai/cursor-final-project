@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web to Markdown Converter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Web to Markdown Converter</h1>
+            
+            <div class="form-group">
+                <label for="url">URL</label>
+                <input type="url" id="url" placeholder="Enter webpage URL" required>
+            </div>
+
+            <button id="convert-btn" onclick="convertToMarkdown()">Convert to Markdown</button>
+
+            <p class="instruction">Enter a URL and click the button to convert the webpage to markdown format.</p>
+            <p class="download-info">The converted markdown file will be downloaded automatically.</p>
+
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Converting...</p>
+            </div>
+
+            <div id="error" class="error hidden"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html> 

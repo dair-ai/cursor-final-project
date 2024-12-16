@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F3F4F6;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 8px;
+}
+
+input[type="url"] {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 1px solid #D1D5DB;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input[type="url"]:focus {
+    border-color: #6366F1;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #6366F1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-bottom: 24px;
+}
+
+button:hover {
+    background-color: #4F46E5;
+}
+
+.instruction, .download-info {
+    text-align: center;
+    color: #6B7280;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.instruction {
+    margin-bottom: 8px;
+}
+
+.loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.loading.hidden {
+    display: none;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #F3F4F6;
+    border-top: 3px solid #6366F1;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 12px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.error {
+    color: #DC2626;
+    text-align: center;
+    margin-top: 16px;
+    font-size: 14px;
+}
+
+.error.hidden {
+    display: none;
+} 
